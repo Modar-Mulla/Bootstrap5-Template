@@ -1,0 +1,268 @@
+:root {
+  --main: #19283f;
+  --secondary: #33d1cc;
+  --button-bg: #ff3150;
+  --button-tc: #ffc400;
+  --section: #eff7fa;
+}
+/* Component */
+
+section .heading p::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-color: var(--secondary);
+}
+
+button.main-button {
+  background-color: var(--button-bg);
+  color: var(--button-tc);
+}
+button.main-button:hover {
+  background-color: rgb(254, 0, 38);
+  color: var(--button-tc);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+nav {
+  background-color: var(--main);
+}
+.navbar .container .navbar-collapse {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.navbar .nav-item .nav-link {
+  color: white;
+}
+
+.search-icon {
+  color: var(--secondary);
+  border-left: 1px solid var(--secondary);
+  padding: 0px 10px;
+}
+.navbar .nav-item .nav-link.active {
+  color: var(--secondary);
+}
+.navbar .nav-item .nav-link:hover {
+  color: var(--secondary);
+}
+
+.navbar .container .navbar-toggler {
+  color: white;
+}
+.navbar .container .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+a.main-btn {
+  background-color: var(--button-bg);
+  color: var(--button-tc);
+}
+a.main-btn:hover {
+  background-color: rgb(254, 0, 38);
+  color: var(--button-tc);
+}
+.landing {
+  background-color: var(--main);
+  color: white;
+  min-height: calc(100vh - 72px);
+}
+
+/* Start Skills */
+
+.skills .container .row .box {
+  counter-increment: section;
+  position: relative;
+  min-height: 400px;
+}
+.skills .container .row .box::before {
+  content: counter(section);
+  position: absolute;
+  top: 0;
+  color: var(--section);
+  font-size: 200px;
+  z-index: -3;
+}
+.skills .container .row .box svg {
+  color: var(--secondary);
+}
+.skills .container .row .box h2 {
+  color: var(--button-tc);
+}
+
+/* End Skills */
+
+/* Start Gallery */
+.gallery {
+  background-color: var(--section);
+}
+.gallery li.active,
+.gallery li:hover {
+  background-color: var(--button-bg);
+  color: var(--button-tc);
+}
+.gallery li:focus {
+  background-color: rgb(254, 0, 38);
+  color: var(--button-tc);
+}
+.gallery .box .image {
+  overflow: hidden;
+  position: relative;
+  padding: 5px;
+}
+.gallery .box .image::before {
+  content: attr(data-name);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  position: absolute;
+  background-color: #33d1ccee;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transform: translateY(calc(-100% - 10px));
+  -webkit-transform: translateY(calc(-100% - 10px));
+  -moz-transform: translateY(calc(-100% - 10px));
+  -ms-transform: translateY(calc(-100% - 10px));
+  -o-transform: translateY(calc(-100% - 10px));
+}
+.gallery .box .image:hover::before {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+.more-btn button {
+  background-color: var(--button-bg);
+  color: var(--button-tc);
+}
+.more-btn button:hover {
+  background-color: rgb(254, 0, 38);
+  color: var(--button-tc);
+}
+/* End Gallery */
+
+/* Start About */
+.about p {
+  max-width: 500px;
+}
+.about .info button {
+  background-color: var(--button-bg);
+  color: var(--button-tc);
+}
+.about .info button:hover {
+  background-color: rgb(254, 0, 38);
+  color: var(--button-tc);
+}
+
+/* End About */
+
+/* Start Team */
+.team {
+  background-color: var(--section);
+}
+.team .heading-text {
+  color: var(--button-tc);
+}
+.team .box h4 {
+  background-color: var(--secondary);
+}
+
+/* End Team */
+
+/* Start Spons */
+.sponsers .start-project {
+  background-color: var(--main);
+}
+.sponsers .start-project button {
+  background-color: var(--button-bg);
+  color: var(--button-tc);
+}
+.sponsers .start-project button:hover {
+  background-color: rgb(254, 0, 38);
+  color: var(--button-tc);
+}
+/* End Spons */
+
+/* Start Contact */
+.contact {
+  background-color: var(--button-tc);
+}
+.contact input[type="email"] {
+  width: 500px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+}
+.contact input[type="email"]::placeholder {
+  color: white;
+}
+.contact input[type="submit"] {
+  background-color: var(--main);
+  color: var(--button-tc);
+}
+
+/* End Contact */
+
+/* Start Footer */
+footer {
+  background-color: var(--main);
+}
+footer ul li a:hover {
+  color: white !important;
+}
+.credit p:first-child span {
+  color: var(--secondary);
+  font-weight: bold;
+}
+.credit p:last-child span {
+  color: var(--button-tc);
+}
+footer .social ul svg{
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+.social .facebook {
+  background-color: #1877f2;
+}
+.social .youtube {
+  background-color: #ff0000;
+}
+.social .linkedin {
+  background-color: #0077b5;
+}
+.social .twitter {
+  background-color: #1da1f2;
+}
+@media (max-width:991.5px){
+  .social ul{
+    justify-content: center;
+  }
+}
+/* End Footer */
